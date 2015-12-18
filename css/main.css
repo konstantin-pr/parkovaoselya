@@ -23,7 +23,7 @@ html {
     background-attachment: fixed;
     background-position: top center;
     background-size: cover;
-    box-shadow: inset 0 0 2em #6F4E0D
+    box-shadow: inset 0 0 2em #6F4E0D;
 }
 div,
 p,
@@ -190,10 +190,14 @@ h4 {
     color: #d4fe4b !important
 }
 .request-form {
-    padding-top: 70px;
-    padding-left: 84px;
-    width: 960px
+    padding-top: 70px; 
+    display: block;
+    width: 960px;
+    left: 15%;
+    position: absolute;
+    z-index: 1;
 }
+
 .request-form input {
     color: #555555 !important;
     margin-right: 20px;
@@ -219,12 +223,16 @@ h4 {
 input:focus {
     outline: 0
 }
+
 .prices2 {
     background: rgba(0, 0, 0, 0.3) !important;
     color: #fff;
     margin: 0 !important;
-    padding: 0 20px
+    /* padding: 0 20px; */
+    position: absolute;
+    width: 100%;
 }
+
 #footer-logo {
     text-decoration: none;
     color: #d4fe4b !important;
@@ -470,6 +478,7 @@ h3.queue:hover {
 }
 #benefits {
     margin: 0 auto;
+    width: 95%;
 }
 #benefits .row:first-child {
     margin-top: 0
@@ -547,10 +556,11 @@ header ul li a {
     font-size: 26px
 }
 .welcome h1,
-h2.request-title {
+.request-title {
     font-size: 52px;
     display: block;
-    width: 670px;
+    width:100%;
+    display: block;
     margin-bottom: 40px;
     color: #ffe500;
     text-shadow: -1px -1px 1px, 1px -1px 1px #ad4b00, -1px 1px 1px #ad4b00, 1px 1px 1px #ad4b00;
@@ -642,8 +652,29 @@ h2.request-title {
     background-position: top center;
     background-size: cover;
     box-shadow: inset 0 0 2em #6F4E0D;
-    background-color: #d0eef4
+    background-color: #6F4E0D;
 }
+
+/*shtorka on hover*/
+.bg__ad2:hover::before, .bg__ad3:hover::before {
+    display: block;
+    height: 400px;     
+    background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease 0s;
+    width: 100%;
+}
+
+.bg__ad3:hover::before {
+    display: block;
+    height: 440px;
+}
+
+
 .bg11 {
     height: 580px !important
 }
